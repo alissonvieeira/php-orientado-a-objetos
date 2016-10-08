@@ -8,6 +8,10 @@ $x = new SON\Conta\Types\Contatype();
 $x->depositar(10);
 echo $x->getSaldo();
 
+$bancoSantander = new SON\Banco\Santander();
+$bancoSantander->setNome("Santander Exemplo");
+$bancoSantander->conta->depositar(10);
+
 /*
 require_once "Pessoa.php";
 
