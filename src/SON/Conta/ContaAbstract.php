@@ -3,7 +3,7 @@
 abstract class ContaAbstract
 {
     use ProcessoTrait;
-    
+
     protected $saldo;
 
     public final function depositar($valor)
