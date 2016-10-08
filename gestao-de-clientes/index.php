@@ -17,6 +17,8 @@ require_once "ClienteServico.php";
         <thead>
         <tr>
             <th class="text-center">Nome</th>
+            <th class="text-center">Tipo</th>
+            <th class="text-center">Importancia</th>
             <th class="text-center">Detalhar</th>
         </tr>
         </thead>
@@ -40,7 +42,13 @@ require_once "ClienteServico.php";
         ?>
                 <tr>
                     <td>
-                        <?php echo $cliente->nome; ?>
+                        <?php echo $cliente->getNome(); ?>
+                    </td>
+                    <td>
+                        <?php echo $cliente->getTipo(); ?>
+                    </td>
+                    <td>
+                        <?php echo $cliente->getImportancia(); ?>
                     </td>
                     <td><a href="ControleCliente.php?operacao=buscarPorId&id=<?php echo $key; ?>&ordem=<?php echo $ordem; ?>">Detalhar</a></td>
                 </tr>
@@ -50,7 +58,7 @@ require_once "ClienteServico.php";
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="2">
+            <td colspan="4">
                 <a href="ControleCliente.php?operacao=crescente">Crescente</a> |
                 <a href="ControleCliente.php?operacao=decrescente">Decrescente</a>
             </td>
