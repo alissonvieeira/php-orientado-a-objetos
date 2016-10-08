@@ -1,6 +1,8 @@
 <?php
 
-class ContaPremium extends ContaAbstract
+namespace SON\Conta\Types;
+
+class ContaPremiumType extends \SON\Conta\ContaAbstract
 {
     public function __construct()
     {
