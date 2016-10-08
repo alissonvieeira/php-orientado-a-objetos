@@ -11,9 +11,9 @@ $pessoa1->correr(50);
 require_once "Produto.php";
 require_once "Tenis.php";
 
-$tenis = TenisAdidas();
-$tenis->getCor();
+$produto = new Produto();
 
-$tenis2 = new SapaTenis();
-$tenis2->getCor();
-$tenis2->getTamanho();
+$produto->setNome("Tênis Exemplo")
+        ->setDescricao("Essa é a descrição do produto")
+        ->setEstoque(10)
+        ->setValor(1000);
