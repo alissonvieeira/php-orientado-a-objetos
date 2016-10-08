@@ -4,13 +4,14 @@ define('CLASS_DIR', 'src/');
 set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
-$x = new SON\Conta\Types\Contatype();
-$x->depositar(10);
-echo $x->getSaldo();
+$conta = new SON\Conta\Types\Contatype();
+$conta->depositar(10);
+echo $conta->getSaldo();
 
 $bancoSantander = new SON\Banco\Santander();
+$bancoSantander->setConta($conta);
 $bancoSantander->setNome("Santander Exemplo");
-$bancoSantander->conta->depositar(10);
+$bancoSantander->getConta()->getSaldo();
 
 /*
 require_once "Pessoa.php";

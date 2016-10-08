@@ -9,9 +9,9 @@ class Santander
     private $nome;
     public $conta;
 
-    public function __construct()
+    public function __construct($conta = null)
     {
-        $this->conta = new ContaType();
+        $this->conta = $conta;
     }
 
     /**
@@ -36,5 +36,10 @@ class Santander
     public function getConta()
     {
         return $this->conta;
+    }
+
+    public function setConta($conta)
+    {
+        $this->conta = $conta;
     }
 }
