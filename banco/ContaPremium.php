@@ -1,6 +1,6 @@
 <?php
 
-class ContaPremium extends Conta
+class ContaPremium extends ContaAbstract
 {
     public function __construct()
     {
@@ -9,7 +9,6 @@ class ContaPremium extends Conta
 
     protected function calculoDeposito($valor)
     {
-        $valorNormal = parent::calculoDeposito($valor) ;
         return $valor += 20;
     }
 }
