@@ -2,7 +2,9 @@
 
 namespace SON\Conta\Types;
 
-class ContaPremiumType extends \SON\Conta\ContaAbstract
+use SON\Conta\ContaAbstract;
+
+class ContaPremiumType extends ContaAbstract
 {
     public function __construct()
     {
