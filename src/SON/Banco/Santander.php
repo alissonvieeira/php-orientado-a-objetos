@@ -2,14 +2,14 @@
 
 namespace SON\Banco;
 
-use SON\Conta\Types\ContaType;
+use SON\Conta\ContaAbstract;
 
 class Santander
 {
     private $nome;
     public $conta;
 
-    public function __construct($conta = null)
+    public function __construct(ContaAbstract $conta)
     {
         $this->conta = $conta;
     }

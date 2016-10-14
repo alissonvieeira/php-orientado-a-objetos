@@ -1,0 +1,22 @@
+{
+    "name": "son/mvc",
+    "require": {
+        "php": ">=5.3"
+    },
+    "minimun-stability": "alpha",
+    "authors": [
+        {
+            "name": "Alisson Vieira",
+            "email": "alisson.echo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "SON":  "vendor",
+            "App":  "/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
